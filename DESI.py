@@ -60,7 +60,7 @@ ADMIN_IDS = set(config['admin_ids'])
 USER_FILE = config['user_file']
 LOG_FILE = config['log_file']
 COOLDOWN_TIME = config['cooldown_time']
-USER_COOLDOWN = 300  # Cooldown time for normal users in seconds
+USER_COOLDOWN = 5  # Cooldown time for normal users in seconds
 
 admin_balances = config.get('admin_balances', {})
 bgmi_cooldown = {}
@@ -112,7 +112,7 @@ def clear_logs():
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
     welcome_message = (
-        "🔰 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗗𝗘𝗦𝗜 𝗛𝗔𝗖𝗞 𝗗𝗗𝗢𝗦 𝗕𝗢𝗧 🔰\n\n" )
+        "🔰 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 KIRAJ 𝗛𝗔𝗖𝗞 𝗗𝗗𝗢𝗦 𝗕𝗢𝗧 🔰\n\n" )
 
     markup = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
     btn_attack = types.KeyboardButton('🚀 Attack')
@@ -300,7 +300,7 @@ def handle_my_info_button(message):
 
 @bot.message_handler(func=lambda message: message.text == '💰 Buy Access!')
 def handle_buy_access_button(message):
-    response = (f"🔆 DESIHACK 𝐇𝐔𝐁 𝐃𝐃𝐎𝐒 𝐏𝐑𝐈𝐂𝐄 𝐋𝐈𝐒𝐓 🔆\n\n𝖣𝖠𝖸 - 150/-𝖨𝖭𝖱\n𝖶𝖤𝖤𝖪 - 600/-𝖨𝖭𝖱\n𝖬𝖮𝖭𝖳𝖧 - 1200/-𝖨𝖭𝖱\n\nDM TO BUY @LION_DEEPAK")
+    response = (f"🔆 KIRAJ 𝐃𝐃𝐎𝐒 𝐏𝐑𝐈𝐂𝐄 𝐋𝐈𝐒𝐓 🔆\n\n𝖣𝖠𝖸 - 150/-𝖨𝖭𝖱\n𝖶𝖤𝖤𝖪 - 600/-𝖨𝖭𝖱\n𝖬𝖮𝖭𝖳𝖧 - 1200/-𝖨𝖭𝖱\n\nDM TO BUY @KIRASxxHACKS")
     bot.send_message(message.chat.id, response)
 
 
